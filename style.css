@@ -28,16 +28,17 @@ body {
 h1 {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #111;
+  color: #000;
   letter-spacing: 1px;
 }
 
 h2 {
   font-size: 18px;
-  color: #007acc;
+  color: #000;
   border-bottom: 1px solid #ccc;
   padding-bottom: 4px;
   margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -66,4 +67,25 @@ a:hover {
 
 .section {
   margin-bottom: 15px;
+}
+
+/* Education Styling */
+.institution {
+  color: #007acc;
+  font-weight: 600;
+}
+
+.year {
+  color: #555;
+  font-size: 13px;
+}
+
+/* Dot-style bullet list (like Teodora’s CV) */
+.dot-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.dot-list li {
+  margin-bottom: 6px;
 }
