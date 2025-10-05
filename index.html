@@ -4,106 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mihaela Coman - CV</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    .container {
-      display: flex;
-      flex-direction: row;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .left {
-      flex: 2;
-      padding: 20px;
-    }
-    .right {
-      flex: 1;
-      background: #f9f9f9;
-      padding: 20px;
-      border-left: 2px solid #007acc;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-      color: #000;
-    }
-    h2 {
-      font-size: 18px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      color: #007acc;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 4px;
-    }
-    h3 {
-      font-size: 15px;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      color: #333;
-    }
-    p, li {
-      font-size: 14px;
-    }
-    ul {
-      margin: 5px 0 10px 20px;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="left">
+  <div class="cv-container">
+    <div class="left-column">
       <h1>MIHAELA-ADELINA COMAN</h1>
-      <p>Email: <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/mihaelacoman1">github.com/mihaelacoman1</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/mihaela-coman-4bb510234/">linkedin.com/in/mihaela-coman</a></p>
-      <p>Location: Bucharest, Romania</p>
+      <p><strong>Email:</strong> <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/mihaelacoman1">github.com/mihaelacoman1</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mihaela-coman-4bb510234/">linkedin.com/in/mihaela-coman</a></p>
+      <p><strong>Location:</strong> Bucharest, Romania</p>
 
       <h2>EXPERIENCE</h2>
-      <h3>Game Tester, Electronic Arts (Jul – Oct 2024)</h3>
-      <ul>
-        <li>Learned bug reporting and testing procedures.</li>
-        <li>Participated in beta testing sessions, improved teamwork and communication.</li>
-        <li>Explored gameplay scenarios across multiple platforms and identified critical issues.</li>
-        <li>Familiar with Agile processes and bug tracking tools such as JIRA.</li>
-      </ul>
+      <div class="section">
+        <h3>Game Tester, Electronic Arts (Jul – Oct 2024)</h3>
+        <ul>
+          <li>Learned bug reporting and testing procedures.</li>
+          <li>Participated in beta testing sessions, improved teamwork and communication.</li>
+          <li>Explored gameplay scenarios across multiple platforms and identified critical issues.</li>
+          <li>Familiar with Agile processes and bug tracking tools such as JIRA.</li>
+        </ul>
+      </div>
 
       <h2>PROJECTS</h2>
-      <h3>Cypress E-Commerce Full Flow (JavaScript, Jul 2025)</h3>
-      <p>End-to-end testing suite simulating a full user journey. Implemented with Cypress using POM, assertions, reusable test cases. Covered positive & negative scenarios. [<a href="https://github.com/mihaelacoman1/cypress-ecommerce-fullflow">GitHub</a>]</p>
-
-      <h3>Logo Matching Clustering (Python, May 2025)</h3>
-      <p>Python tool for identifying visually similar logos using OpenCV + ML. GUI for visualization. [<a href="https://github.com/miha1110/logo-matching-clustering">GitHub</a>]</p>
-
-      <h3>Hotel Reservation System (SQL, Dec 2024)</h3>
-      <p>Relational DB with 6 tables managing hotel ops, reservations, and availability.</p>
-
-      <h3>Factorial Fusion (Assembly, Dec 2023)</h3>
-      <p>Optimized factorial + vector minimum calculation in Assembly. [<a href="https://github.com/miha1110/FactorialFusion">GitHub</a>]</p>
+      <div class="section">
+        <h3>Cypress E-Commerce Full Flow (JavaScript, Jul 2025)</h3>
+        <p>End-to-end testing suite simulating a full user journey with Cypress (POM, assertions, reusable test cases). [<a href="https://github.com/mihaelacoman1/cypress-ecommerce-fullflow">GitHub</a>]</p>
+        
+        <h3>Logo Matching Clustering (Python, May 2025)</h3>
+        <p>Python tool for identifying visually similar logos using OpenCV + ML. GUI for visualization. [<a href="https://github.com/miha1110/logo-matching-clustering">GitHub</a>]</p>
+        
+        <h3>Hotel Reservation System (SQL, Dec 2024)</h3>
+        <p>Relational DB with 6 tables managing hotel operations and availability.</p>
+        
+        <h3>Factorial Fusion (Assembly, Dec 2023)</h3>
+        <p>Optimized factorial + vector minimum calculation in Assembly. [<a href="https://github.com/miha1110/FactorialFusion">GitHub</a>]</p>
+      </div>
 
       <h2>EXTRACURRICULAR</h2>
-      <h3>Security Summer School, POLITEHNICA (Jun – Aug 2025)</h3>
-      <p>Binary analysis, vulnerability discovery, exploitation, reverse engineering. Worked on real-world CTF challenges. [<a href="https://open-education-hub.github.io/binary-security/">More info</a>]</p>
+      <div class="section">
+        <h3>Security Summer School, POLITEHNICA (Jun – Aug 2025)</h3>
+        <p>Binary analysis, vulnerability discovery, reverse engineering. [<a href="https://open-education-hub.github.io/binary-security/">More info</a>]</p>
 
-      <h3>HackITall (Dec 2024)</h3>
-      <p>Implemented a stock trading bot using position limits & market monitoring.</p>
+        <h3>HackITall (Dec 2024)</h3>
+        <p>Implemented a stock trading bot using position limits & real-time market monitoring.</p>
+      </div>
     </div>
 
-    <div class="right">
+    <div class="right-column">
       <h2>EDUCATION</h2>
       <p><strong>Academy of Economic Studies, Bucharest</strong> (2023 – 2026)<br>
       Faculty of Cybernetics, Statistics and Economic Informatics</p>
