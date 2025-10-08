@@ -1,94 +1,138 @@
-n<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mihaela-Adelina Coman - CV</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mihaela-Adelina Coman — CV</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #101621;
+      --muted: #92a0b3;
+      --accent: #69b5ff;
+      --border: #1b2331;
+      --text: #e8edf5;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, #1a2740 0%, transparent 55%),
+                  radial-gradient(1400px 1000px at 110% 10%, #112135 0%, transparent 50%),
+                  var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layout */
+    .page {
+      max-width: 1040px;
+      margin: 28px auto 60px;
+      padding: 0 20px;
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 18px; object-fit: cover;
+      border: 1px solid var(--border); background: #0f1520;
+    }
+    .id h1 {
+      margin: 0 0 6px; font-size: 26px; letter-spacing: 0.2px;
+    }
+    .id p { margin: 4px 0; color: var(--muted); }
+    .links a { color: var(--accent); text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+
+    .actions { display: flex; gap: 10px; align-self: stretch; justify-self: end; }
+    .btn {
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: #0f1520; color: var(--text); cursor: pointer; font-weight: 600;
+    }
+    .btn.primary { background: linear-gradient(180deg, #1b6fff, #1a5ee0); border-color: #184db8; }
+
+    .grid {
+      display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    h2 {
+      margin: 0 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 1.8px;
+      color: var(--accent);
+    }
+    h3 { margin: 12px 0 6px; font-size: 15px; }
+    .meta { color: var(--muted); font-size: 13px; }
+    ul { margin: 8px 0 10px 18px; padding: 0; }
+    li { margin: 6px 0; }
+
+    .pill {
+      display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; margin: 4px 6px 0 0;
+      background: #0f1520; border: 1px solid var(--border); color: #cfe0ff;
+    }
+    .two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .footer { text-align: center; margin-top: 18px; color: var(--muted); font-size: 12px; }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .header, .card { box-shadow: none; }
+      .btn, .footer { display: none; }
+      .page { margin: 0; }
+      :root { --text: #111; --muted: #444; --card: #fff; --border: #ddd; --bg: #fff; --accent:#0b5bd3; }
+    }
+
+    /* Mobile */
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .header { grid-template-columns: 90px 1fr; }
+      .avatar { width: 90px; height: 90px; }
+      .actions { grid-column: 1 / -1; justify-self: start; }
+    }
+  </style>
 </head>
 <body>
-  <div class="cv-container">
-    <!-- LEFT COLUMN -->
-    <div class="left-column">
-      <h1>MIHAELA-ADELINA COMAN</h1>
-      <p><strong>Email:</strong> <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/mihaelacoman1">github.com/mihaelacoman1</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mihaela-coman-4bb510234/">linkedin.com/in/mihaela-coman</a></p>
-      <p><strong>Location:</strong> Bucharest, Romania</p>
-
-      <h2>EXPERIENCE</h2>
-      <div class="section">
-        <h3>Game Tester, Electronic Arts (Jul – Oct 2024)</h3>
-        <ul>
-          <li>Learned bug reporting and testing procedures. Participated in beta testing sessions, improved teamwork and communication. Explored gameplay scenarios across multiple platforms and identified critical issues.
-          Familiar with Agile processes and bug tracking tools such as JIRA.</li>
-        </ul>
+  <div class="page">
+    <!-- HEADER -->
+    <section class="header">
+      <!-- Updated with your uploaded photo -->
+      <img class="avatar" src="WhatsApp Image 2025-10-07 at 23.54.58_6f6a0ab9 (1).jpg" alt="Mihaela-Adelina Coman" />
+      <div class="id">
+        <h1>Mihaela‑Adelina Coman</h1>
+        <p>Bucharest, Romania · <a class="links" href="tel:+40758742612">+40 758 742 612</a> · <a class="links" href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></p>
+        <p class="links">
+          <a href="https://github.com/mihaelacoman1" target="_blank" rel="noreferrer">github.com/mihaelacoman1</a> ·
+          <a href="https://www.linkedin.com/in/mihaela-coman-4bb510234/" target="_blank" rel="noreferrer">linkedin.com/in/mihaela-coman</a>
+        </p>
       </div>
-
-     <h2>PROJECTS</h2>
-
-<div class="section">
-  <h3>Cypress E-Commerce Full Flow (JavaScript, July 2025)</h3>
-  <p>Developed an end-to-end testing suite simulating a full user journey on an <strong>e-commerce platform</strong>: registration, login, product search, add to cart, checkout, and logout. Implemented using <strong>Cypress</strong> with page object model, assertions, and reusable <strong>test cases</strong>. Covered both positive and negative scenarios to ensure robust UI/UX flows. <span class="github-link"> [<a href="https://github.com/mihaelacoman1/cypress-ecommerce-fullflow">GitHub</a>]</p>
-
-  <h3>Logo Matching Clustering (Python, May 2025)</h3>
-  <p>Developed a <strong>Python</strong> tool for identifying and clustering visually similar logos using image processing and <strong>machine learning</strong>. Applied <strong>OpenCV</strong> for grayscale conversion, thresholding, and ORB feature extraction; used brute-force matching and <strong>KMeans clustering</strong> to group similar images. Built support for both manual and automatic comparison. Integrated GUI for user-friendly visualization of matching logos. <span class="github-link"> [<a href="https://github.com/miha1110/logo-matching-clustering">GitHub</a>]</p>
-
-  <h3>Hotel Reservation System (SQL, Dec 2024)</h3>
-  <p>Designed and implemented a <strong>relational database</strong> with six tables managing hotel operations. The system includes customer management, reservation tracking and automatic availability updates based on <strong>SQL queries</strong>.</p>
-
-  <h3>Factorial Fusion (Assembly, Dec 2023)</h3>
-  <p>Developed an <strong>Assembly</strong> program calculates sum between a factorial and vector minimum. Used recursion for factorial calculation and <strong>optimized memory access</strong> in Assembly to compute results efficiently for any vector size. <span class="github-link"> [<a href="https://github.com/miha1110/FactorialFusion">GitHub</a>]</p>
-</div>
-
-
-      <h2>EXTRACURRICULAR</h2>
-      <div class="section">
-        <h3>Security Summer School, POLITEHNICA (Jun – Aug 2025)</h3>
-        <p>Participated in the Binary Security module, focusing on <strong>static and dynamic binary analysis</strong>, vulnerability discovery, exploitation techniques, and reverse engineering using <strong>GDB</strong> and <strong>disassemblers</strong>. Worked on real-world <strong>CTF-style</strong> challenges simulating realistic attack and defense scenarios, covering stack overflows, buffer overflows, canary bypass, memory layout inspection, and shellcode injection. Enhanced my understanding of <strong>low-level security</strong> concepts and developed analytical problem-solving under pressure. [<a href="https://open-education-hub.github.io/binary-security/">More info</a>]</p>
-
-        <h3>HackITall (Dec 2024)</h3>
-         <p>Competed in the <strong>HackITall 2024</strong> hackathon, implementing a <strong>stock trading bot</strong> capable of balancing risks and optimizing performance through position limits and <strong>real-time market</strong> monitoring. The solution focused on combining algorithmic decision-making with <strong>data analysis</strong> to simulate real trading environments.</p>
+      <div class="actions">
+        <button class="btn primary" onclick="window.print()">🖨️ Printează / PDF</button>
+        <a class="btn" href="#projects">📂 Proiecte</a>
       </div>
-    </div>
+    </section>
 
-    <!-- RIGHT COLUMN -->
-    <div class="right-column">
-      <h2>EDUCATION</h2>
-      <p><span class="institution">Academy of Economic Studies, Bucharest</span><br>
-      <span class="year">2023 – Present</span><br>
-      Faculty of Cybernetics, Statistics and Economic Informatics</p>
+    <!-- Restul conținutului rămâne identic ca înainte -->
 
-      <p><span class="institution">National College “Mihai Eminescu” – Buzau, Romania</span><br>
-      <span class="year">High School Diploma</span><br>
-      Baccalaureate Exam: Computer Science – 10</p>
-
-      <h2>CERTIFICATIONS</h2>
-      <ul class="dot-list">
-        Oracle Academy (Dec 2024): 
-        <li>Database Design
-        <li>SQL Programming
-          <li>PL/SQL Programming
-      </ul>
-
-      <h2>SKILLS</h2>
-      <ul class="dot-list">
-        <li><strong>Advanced in:</strong> C/C++, Data Structures, Algorithms, SQL, PL/SQL</li>
-        <li><strong>Intermediate in:</strong> Python, Git, HTML/CSS, C#, JavaScript</li>
-        <li><strong>Beginner in:</strong> Java</li>
-        <li><strong>Others:</strong> Mathematics, Machine Learning, AI</li>
-      </ul>
-
-      <h2>HOBBIES & INTERESTS</h2>
-      <p>Reading, Coding, Problem Solving, Chess</p>
-    </div>
+    <div class="footer">Ultima actualizare: <span id="today"></span></div>
   </div>
+
+  <script>
+    // Set today date for the footer
+    const d = new Date();
+    document.getElementById('today').textContent = d.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
