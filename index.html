@@ -5,213 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mihaela‑Adelina Coman — CV</title>
   <style>
-    :root {
-      --fg: #111;
-      --muted: #5a5a5a;
-      --link: #0b57d0;
-      --sep: #dcdcdc;
-      --accent: #111;
-      --bg: #fff;
-      --maxw: 1100px;
-      --sidebar-w: 340px;
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: white;
+      color: #111;
     }
-    html, body { background: var(--bg); color: var(--fg); font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    .page { max-width: var(--maxw); margin: 32px auto; padding: 0 20px; }
-
-    /* Header with photo on the right */
-    header { display: grid; grid-template-columns: 1fr 170px; gap: 24px; align-items: start; margin-bottom: 10px; }
-    .name { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: .4px; color: var(--accent); }
-    .contact-lines { margin-top: 8px; font-size: 14px; }
-    .contact-lines .label { color: #7a7a7a; font-style: italic; }
-    .contact-lines a { color: var(--link); text-decoration: none; }
-    .contact-lines a:hover { text-decoration: underline; }
-    .contact-lines .row { margin: 4px 0; }
-
-    .photo-wrap { display:flex; justify-content:flex-end; }
-    .avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center; box-shadow: 0 0 0 3px #fff, 0 0 0 2px var(--sep); }
-
-    /* Two-column body */
-    .grid { display: grid; grid-template-columns: 1fr var(--sidebar-w); gap: 28px; align-items: start; }
-
-    /* Section headings */
-    h2 { font-size: 15px; letter-spacing: .8px; text-transform: uppercase; margin: 18px 0 8px; font-weight: 800; }
-    .rule { height: 2px; background: #000; margin-top: 2px; margin-bottom: 8px; }
-
-    /* Items */
-    .item { margin: 10px 0 14px; }
-    .item .title { font-weight: 800; }
-    .item .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
-    .item ul { margin: 6px 0 0 18px; }
-    .item li { margin: 4px 0; }
-
-    .title a { color: var(--link); text-decoration: none; }
-    .title a:hover { text-decoration: underline; }
-
-    /* Languages dots */
-    .lang-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 8px 0; }
-    .lang-name { font-weight: 700; }
-    .dots { display: inline-flex; gap: 6px; }
-    .dot { width: 12px; height: 12px; border-radius: 50%; background: #cfcfcf; display: inline-block; }
-    .dot.full { background: #2b73ff; }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip { padding: 3px 8px; border: 1px solid var(--sep); border-radius: 999px; font-size: 13px; }
-
-    /* Print */
-    @media print {
-      :root { --maxw: 1000px; --sidebar-w: 300px; }
-      .page { margin: 0; padding: 0 10mm; }
-      a { color: inherit; text-decoration: none; }
-      .rule { background: #bdbdbd; }
-      header { margin-bottom: 6mm; grid-template-columns: 1fr 140px; }
-      .grid { gap: 16px; }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    /* Mobile */
-    @media (max-width: 900px) {
-      header { grid-template-columns: 1fr; }
-      .photo-wrap { justify-content:flex-start; }
-      .grid { grid-template-columns: 1fr; }
+    .left, .right {
+      padding: 40px 24px;
+    }
+    .left {
+      flex: 2;
+      border-right: 1px solid #ccc;
+    }
+    .right {
+      flex: 1;
+      background: #f9f9f9;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+    .section .item {
+      margin-bottom: 12px;
+    }
+    .section .item-title {
+      font-weight: bold;
+    }
+    .section .item-sub {
+      font-size: 13px;
+      color: #555;
+    }
+    ul {
+      padding-left: 18px;
+    }
+    ul li {
+      margin-bottom: 4px;
+    }
+    .dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+    .dots .full {
+      background: #2b73ff;
+    }
+    .skills ul li strong {
+      display: inline-block;
+      width: 100px;
+    }
+    a {
+      color: #0b57d0;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div>
-        <div class="name">MIHAELA‑ADELINA COMAN</div>
-        <div class="contact-lines">
-          <div class="row"><span class="label">Email: </span> <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></div>
-          <div class="row"><span class="label">LinkedIn: </span> <a href="https://linkedin.com/in/mihaela-coman-4bb510234/" target="_blank" rel="noopener">https://linkedin.com/in/mihaela-coman-4bb510234/</a></div>
-          <div class="row"><span class="label">GitHub: </span> <a href="https://github.com/mihaelacoman1" target="_blank" rel="noopener">https://github.com/mihaelacoman1</a></div>
-          <div class="row"><span class="label">Location: </span> Bucharest, Romania</div>
-          <div class="row"><span class="label">Phone: </span> <a href="tel:+40758742612">+40 758 742 612</a></div>
-        </div>
-      </div>
-      <div class="photo-wrap">
-        <img class="avatar" src="photo.jpg" onerror="this.onerror=null;this.src='photo.png';" alt="Mihaela Coman" />
-      </div>
-    </header>
+  <div class="container">
+    <div class="left">
+      <h1>Mihaela‑Adelina Coman</h1>
 
-    <div class="grid">
-      <!-- LEFT: main content in the requested order -->
-      <div class="main">
-        <section>
-          <h2>Experience</h2>
-          <div class="rule"></div>
-          <div class="item">
-            <div class="title">Electronic Arts — Game Tester</div>
-            <ul>
-              <li>Reported bugs with clear reproduction steps; explored gameplay scenarios across platforms.</li>
-              <li>Worked within Agile QA processes using bug tracking tools (e.g., JIRA).</li>
-              <li>Strengthened attention to detail and analytical thinking through iterative test cycles.</li>
-            </ul>
-            <div class="meta">Jul – Oct 2024</div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Extracurricular</h2>
-          <div class="rule"></div>
-          <div class="item">
-            <div class="title">HackITall — Trading Bot (Dec 2024)</div>
-            <div class="meta">Role: developer. Implemented position limits and real‑time monitoring for risk‑balanced execution.</div>
-          </div>
-          <div class="item">
-            <div class="title">Security Summer School — POLITEHNICA Bucharest (Jun–Aug 2025)</div>
-            <ul>
-              <li>Binary Security: static/dynamic analysis, vulnerability discovery, exploitation, reverse engineering (GDB & disassemblers).</li>
-              <li>CTF‑style challenges (BOFs, canaries, memory layout, shellcode).</li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <h2>Portofolio</h2>
-          <div class="rule"></div>
-
-          <div class="item">
-            <div class="title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
-            <ul>
-              <li>Automated end‑to‑end journey (register, login, search, add to cart, checkout, logout) with Page Object Model & reusable assertions.</li>
-              <li>Covered positive & negative scenarios for robust UI/UX.</li>
-            </ul>
-            <div class="meta">Tech: JavaScript, Cypress · Date: July 2025</div>
-          </div>
-
-          <div class="item">
-            <div class="title">Logo Matching Clustering — <a href="#">Github</a></div>
-            <ul>
-              <li>Clustering similar logos via OpenCV preprocessing, ORB features, BF matching, and KMeans.</li>
-              <li>GUI for interactive visualization; manual/automatic comparison modes.</li>
-            </ul>
-            <div class="meta">Tech: Python, OpenCV, scikit‑learn · Date: May 2025</div>
-          </div>
-
-          <div class="item">
-            <div class="title">Hotel Reservation System — <a href="#">Github</a></div>
-            <ul>
-              <li>Relational schema & queries for customers, reservations, and availability updates via SQL logic.</li>
-            </ul>
-            <div class="meta">Tech: SQL · Date: Dec 2024</div>
-          </div>
-
-          <div class="item">
-            <div class="title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
-            <ul>
-              <li>Computes sum between a factorial and a vector minimum; recursion + optimized memory access.</li>
-            </ul>
-            <div class="meta">Tech: Assembly · Date: Dec 2023</div>
-          </div>
-        </section>
+      <div class="section">
+        <h2>Awards and Competitions</h2>
+        <div class="item"><div class="item-title">HackITall — Trading Bot (Dec 2024)</div><div class="item-sub">Role: developer. Implemented position limits and real‑time monitoring for risk‑balanced execution.</div></div>
       </div>
 
-      <!-- RIGHT: sidebar (as requested) -->
-      <aside class="sidebar">
-          <div class="item">
-            <div class="title"><a href="#">Academy of Economic Studies — Faculty of Cybernetics, Statistics and Economic Informatics</a></div>
-            <div class="meta">2023 – 2026</div>
-            <div class="meta">Bachelor's degree in progress.</div>
-          </div>
-          <div class="rule" style="height:1px"></div>
-          <div class="item">
-            <div class="title"><a href="#">National College “Mihai Eminescu” — Buzau, Romania</a></div>
-            <div class="meta">Baccalaureat Exam: Computer Science: 10</div>
-          </div>
-        </div>
+      <div class="section">
+        <h2>Portfolio</h2>
 
-        </h2>
-          <div class="rule"></div>
-          <div class="lang-row"><span class="lang-name">English</span> <span class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot"></span></span></div>
-          <div class="lang-row"><span class="lang-name">Romanian</span> <span class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></span></div>
-          <div class="lang-row"><span class="lang-name">French</span> <span class="dots"><span class="dot full"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
-        </div>
-
-        <div class="s-section">
-          <h2>Certifications</h2>
-          <div class="rule"></div>
-          <div class="item">
-            <div class="title">Oracle Academy (Dec 2024)</div>
-            <div class="meta">Database Design, SQL Programming, PL/SQL Programming</div>
-          </div>
-        </div>
-
-        <div class="s-section">
-          <h2>Skills</h2>
-          <div class="rule"></div>
-          <ul style="margin:8px 0 0 18px;">
-            <li><strong>Advanced in:</strong> C/C++, Data Structures, Algorithms, OracleSQL</li>
-            <li><strong>Intermediate in:</strong> Python, Git, React, HTML/CSS, C#, JavaScript</li>
-            <li><strong>Beginner in:</strong> Java</li>
-            <li><strong>Others:</strong> Mathematics, ML, AI</li>
+        <div class="item">
+          <div class="item-title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
+          <ul>
+            <li>Automated end‑to‑end journey using Page Object Model & reusable assertions.</li>
+            <li>Covered positive & negative scenarios for robust UI/UX.</li>
           </ul>
+          <div class="item-sub">Tech: JavaScript, Cypress · July 2025</div>
         </div>
-      </aside>
+
+        <div class="item">
+          <div class="item-title">Logo Matching Clustering — <a href="#">Github</a></div>
+          <ul>
+            <li>Clustering similar logos via OpenCV + KMeans.</li>
+            <li>GUI for manual/automatic comparison.</li>
+          </ul>
+          <div class="item-sub">Tech: Python, OpenCV, scikit‑learn · May 2025</div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">Hotel Reservation System — <a href="#">Github</a></div>
+          <ul>
+            <li>Relational schema & SQL logic for availability/reservations.</li>
+          </ul>
+          <div class="item-sub">Tech: SQL · Dec 2024</div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
+          <ul>
+            <li>Recursion + optimized memory access.</li>
+          </ul>
+          <div class="item-sub">Tech: Assembly · Dec 2023</div>
+        </div>
+      </div>
     </div>
 
+    <div class="right">
+      <div class="section">
+        <h2>Education</h2>
+        <div class="item">
+          <div class="item-title">Academy of Economic Studies — Faculty of Cybernetics, Statistics and Economic Informatics</div>
+          <div class="item-sub">2023 – 2026</div>
+          <div class="item-sub">Bachelor’s degree in progress.</div>
+        </div>
+        <hr>
+        <div class="item">
+          <div class="item-title">National College “Mihai Eminescu” — Buzau, Romania</div>
+          <div class="item-sub">Baccalaureat Exam: Computer Science: 10</div>
+        </div>
+      </div>
 
+      <div class="section">
+        <h2>Languages</h2>
+        <div class="item">English <span class="dots"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></span></div>
+        <div class="item">Romanian <span class="dots"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span></span></div>
+        <div class="item">French <span class="dots"><span class="full"></span><span></span><span></span><span></span><span></span></span></div>
+      </div>
+
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Oracle Academy (2024): SQL, PL/SQL</li>
+        </ul>
+      </div>
+
+      <div class="section skills">
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>Advanced:</strong> C/C++, Data Structures, Algorithms, OracleSQL</li>
+          <li><strong>Intermediate:</strong> Python, Git, React, HTML/CSS, C#, JavaScript</li>
+          <li><strong>Beginner:</strong> Java</li>
+          <li><strong>Others:</strong> Mathematics, ML, AI</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Volunteering</h2>
+        <ul>
+          <li>Security Summer School: CTFs, binary analysis, exploitation, GDB, disassemblers.</li>
+          <li>HackITall (Trading Bot): risk management, logic constraints, execution design.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </body>
 </html>
-
-
