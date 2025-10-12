@@ -13,13 +13,13 @@
       --accent: #111;
       --bg: #fff;
       --maxw: 1100px;
-      --sidebar-w: 320px;
+      --sidebar-w: 340px;
     }
     html, body { background: var(--bg); color: var(--fg); font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     .page { max-width: var(--maxw); margin: 32px auto; padding: 0 20px; }
 
-    /* Header: name + contact lines exactly like reference */
-    header { margin-bottom: 18px; }
+    /* Header with photo on the right */
+    header { display: grid; grid-template-columns: 1fr 170px; gap: 24px; align-items: start; margin-bottom: 10px; }
     .name { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: .4px; color: var(--accent); }
     .contact-lines { margin-top: 8px; font-size: 14px; }
     .contact-lines .label { color: #7a7a7a; font-style: italic; }
@@ -27,10 +27,13 @@
     .contact-lines a:hover { text-decoration: underline; }
     .contact-lines .row { margin: 4px 0; }
 
-    /* Two-column layout */
+    .photo-wrap { display:flex; justify-content:flex-end; }
+    .avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center; box-shadow: 0 0 0 3px #fff, 0 0 0 2px var(--sep); }
+
+    /* Two-column body */
     .grid { display: grid; grid-template-columns: 1fr var(--sidebar-w); gap: 28px; align-items: start; }
 
-    /* Section headings like in reference */
+    /* Section headings */
     h2 { font-size: 15px; letter-spacing: .8px; text-transform: uppercase; margin: 18px 0 8px; font-weight: 800; }
     .rule { height: 3px; background: var(--sep); margin-top: 2px; margin-bottom: 8px; }
 
@@ -41,14 +44,8 @@
     .item ul { margin: 6px 0 0 18px; }
     .item li { margin: 4px 0; }
 
-    /* Links inside titles */
     .title a { color: var(--link); text-decoration: none; }
     .title a:hover { text-decoration: underline; }
-
-    /* Sidebar */
-    .sidebar { position: relative; }
-    .avatar { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; object-position: center; display: block; margin-left: auto; margin-bottom: 14px; box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--sep); }
-    .s-section { margin-bottom: 18px; }
 
     /* Languages dots */
     .lang-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 8px 0; }
@@ -57,7 +54,6 @@
     .dot { width: 12px; height: 12px; border-radius: 50%; background: #cfcfcf; display: inline-block; }
     .dot.full { background: #2b73ff; }
 
-    /* Skills chips */
     .chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip { padding: 3px 8px; border: 1px solid var(--sep); border-radius: 999px; font-size: 13px; }
 
@@ -67,33 +63,66 @@
       .page { margin: 0; padding: 0 10mm; }
       a { color: inherit; text-decoration: none; }
       .rule { background: #bdbdbd; }
-      header { margin-bottom: 6mm; }
+      header { margin-bottom: 6mm; grid-template-columns: 1fr 140px; }
       .grid { gap: 16px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      header { grid-template-columns: 1fr; }
+      .photo-wrap { justify-content:flex-start; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <div class="name">MIHAELA‑ADELINA COMAN</div>
-      <div class="contact-lines">
-        <div class="row"><span class="label">Email: </span> <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></div>
-        <div class="row"><span class="label">LinkedIn: </span> <a href="https://linkedin.com/in/mihaela-coman-4bb510234/" target="_blank" rel="noopener">https://linkedin.com/in/mihaela-coman-4bb510234/</a></div>
-        <div class="row"><span class="label">GitHub: </span> <a href="https://github.com/mihaelacoman1" target="_blank" rel="noopener">https://github.com/mihaelacoman1</a></div>
-        <div class="row"><span class="label">Location: </span> Bucharest, Romania</div>
-        <div class="row"><span class="label">Phone: </span> <a href="tel:+40758742612">+40 758 742 612</a></div>
+      <div>
+        <div class="name">MIHAELA‑ADELINA COMAN</div>
+        <div class="contact-lines">
+          <div class="row"><span class="label">Email: </span> <a href="mailto:mihaelaadelinacoman@gmail.com">mihaelaadelinacoman@gmail.com</a></div>
+          <div class="row"><span class="label">LinkedIn: </span> <a href="https://linkedin.com/in/mihaela-coman-4bb510234/" target="_blank" rel="noopener">https://linkedin.com/in/mihaela-coman-4bb510234/</a></div>
+          <div class="row"><span class="label">GitHub: </span> <a href="https://github.com/mihaelacoman1" target="_blank" rel="noopener">https://github.com/mihaelacoman1</a></div>
+          <div class="row"><span class="label">Location: </span> Bucharest, Romania</div>
+          <div class="row"><span class="label">Phone: </span> <a href="tel:+40758742612">+40 758 742 612</a></div>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <img class="avatar" src="photo.jpg" alt="Mihaela Coman" />
       </div>
     </header>
 
     <div class="grid">
-      <!-- LEFT: main content -->
+      <!-- LEFT: main content in the requested order -->
       <div class="main">
         <section>
-          <h2>Awards and Competitions</h2>
+          <h2>Experience</h2>
+          <div class="rule"></div>
+          <div class="item">
+            <div class="title">Electronic Arts — Game Tester</div>
+            <ul>
+              <li>Reported bugs with clear reproduction steps; explored gameplay scenarios across platforms.</li>
+              <li>Worked within Agile QA processes using bug tracking tools (e.g., JIRA).</li>
+              <li>Strengthened attention to detail and analytical thinking through iterative test cycles.</li>
+            </ul>
+            <div class="meta">Jul – Oct 2024</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Extracurricular</h2>
           <div class="rule"></div>
           <div class="item">
             <div class="title">HackITall — Trading Bot (Dec 2024)</div>
             <div class="meta">Role: developer. Implemented position limits and real‑time monitoring for risk‑balanced execution.</div>
+          </div>
+          <div class="item">
+            <div class="title">Security Summer School — POLITEHNICA Bucharest (Jun–Aug 2025)</div>
+            <ul>
+              <li>Binary Security: static/dynamic analysis, vulnerability discovery, exploitation, reverse engineering (GDB & disassemblers).</li>
+              <li>CTF‑style challenges (BOFs, canaries, memory layout, shellcode).</li>
+            </ul>
           </div>
         </section>
 
@@ -134,18 +163,11 @@
             </ul>
             <div class="meta">Tech: Assembly · Date: Dec 2023</div>
           </div>
-
-          <div class="item">
-            <div class="title">Other</div>
-            <div class="meta">Hobbies & Interests: Reading, Coding, Problem Solving, Chess</div>
-          </div>
         </section>
       </div>
 
-      <!-- RIGHT: sidebar -->
+      <!-- RIGHT: sidebar (as requested) -->
       <aside class="sidebar">
-        <img class="avatar" src="photo.jpg" alt="Mihaela Coman" />
-
         <div class="s-section">
           <h2>Education</h2>
           <div class="rule"></div>
@@ -192,33 +214,6 @@
             <span class="chip">QA/Testing</span>
           </div>
         </div>
-
-        <div class="s-section">
-          <h2>Volunteering</h2>
-          <div class="rule"></div>
-          <div class="item">
-            <div class="title">Security Summer School — POLITEHNICA Bucharest (Jun–Aug 2025)</div>
-            <ul>
-              <li>Binary Security module: static/dynamic analysis, vulnerability discovery, exploitation, reverse engineering (GDB & disassemblers).</li>
-              <li>CTF‑style challenges (BOFs, canaries, memory layout, shellcode).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="s-section">
-          <h2>Experience</h2>
-          <div class="rule"></div>
-          <div class="item">
-            <div class="title">Electronic Arts — Game Tester</div>
-            <ul>
-              <li>Reported bugs with clear reproduction steps; explored gameplay scenarios across platforms.</li>
-              <li>Worked within Agile QA processes using bug tracking tools (e.g., JIRA).</li>
-              <li>Strengthened attention to detail and analytical thinking through iterative test cycles.</li>
-            </ul>
-            <div class="meta">Jul – Oct 2024</div>
-          </div>
-        </div>
-
       </aside>
     </div>
 
@@ -228,7 +223,6 @@
       <ul>
         <li>Salvează fotografia ca <strong>photo.jpg</strong> lângă acest fișier (sau schimbă src în &lt;img&gt;).</li>
         <li>Înlocuiește linkurile „Github” cu repo‑urile tale reale.</li>
-        <li>Ajustează punctajul la Languages (setează .full pe 0–5 puncte).</li>
       </ul>
     </section>
 
