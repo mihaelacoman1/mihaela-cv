@@ -16,7 +16,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        /* Definim din nou raportul de lățime pentru două coloane */
         .left {
             flex: 2; /* Lățime mai mare pentru conținutul principal */
             padding: 40px 24px;
@@ -26,7 +25,18 @@
             flex: 1; /* Lățime mai mică pentru secțiunile scurte */
             padding: 40px 24px;
             background: #f9f9f9;
+            text-align: center; /* Centrează imaginea și, eventual, alte elemente din dreapta */
         }
+        /* Stil pentru imaginea de profil */
+        .profile-pic {
+            width: 120px; /* Dimensiune fixă */
+            height: 120px; /* Dimensiune fixă */
+            border-radius: 50%; /* Face imaginea circulară */
+            object-fit: cover; /* Asigură că imaginea se încadrează bine în cerc */
+            margin-bottom: 20px; /* Spațiu sub imagine */
+            border: 2px solid #ccc; /* Opțional: o bordură subțire */
+        }
+
         h1 {
             font-size: 28px;
             margin-bottom: 10px;
@@ -55,7 +65,7 @@
             padding-left: 15px; /* Spațiu pentru bullet point */
             text-indent: -15px; /* Mută textul bullet point-ului înapoi, dar nu și rândurile următoare */
         }
-        /* Eliminăm stilul implicit al listelor */
+        /* Eliminăm stilul implicit al listelor pentru a folosi simbolul • */
         ul {
             list-style: none; /* Scoatem punctele implicite */
             padding-left: 0;
@@ -110,9 +120,9 @@
                 <div class="item">
                     <div class="item-title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
                     <div class="item-sub">
-                        • **End‑to‑end testing suite** simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.
-                        <br>Implemented using **Cypress** with **page object model**, assertions, and reusable test cases.
-                        <br>Covered both **positive and negative scenarios** to ensure **robust UI/UX flows**.
+                        • <strong>End‑to‑end testing suite</strong> simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.
+                        <br>Implemented using <strong>Cypress</strong> with <strong>page object model</strong>, assertions, and reusable test cases.
+                        <br>Covered both <strong>positive and negative scenarios</strong> to ensure <strong>robust UI/UX flows</strong>.
                     </div>
                     <div class="item-sub">Tech: JavaScript, Cypress · July 2025</div>
                 </div>
@@ -120,9 +130,9 @@
                 <div class="item">
                     <div class="item-title">Video Rental App — <a href="https://github.com/mihaelacoman1/video-rental-app">Github</a></div>
                     <div class="item-sub">
-                        • **Full-stack web platform** developed in **C#** for managing film rentals, including **user authentication** and transactions.
-                        <br>Allows users to **search**, view details, and **rent movies**, while managing **available stock** and transaction history.
-                        <br>The project focuses on maintaining **data consistency** and providing a smooth user experience.
+                        • <strong>Full-stack web platform</strong> developed in <strong>C#</strong> for managing film rentals, including <strong>user authentication</strong> and transactions.
+                        <br>Allows users to <strong>search</strong>, view details, and <strong>rent movies</strong>, while managing <strong>available stock</strong> and transaction history.
+                        <br>The project focuses on maintaining <strong>data consistency</strong> and providing a smooth user experience.
                     </div>
                     <div class="item-sub">Tech: C#, .NET, SQL · May 2025</div>
                 </div>
@@ -130,11 +140,11 @@
                 <div class="item">
                     <div class="item-title">Logo Matching Clustering — <a href="https://github.com/mihaelacoman1/logo-matching-clustering">Github</a></div>
                     <div class="item-sub">
-                        • Developed a **Python tool** for clustering visually similar logos using **image processing** and **machine learning**.
-                        <br>Preprocessed images (grayscale, thresholding, etc.) and extracted **ORB features**.
-                        <br>Used **brute-force matching** (Hamming distance) and **KMeans clustering** to group similar logos.
+                        • Developed a <strong>Python tool</strong> for clustering visually similar logos using <strong>image processing</strong> and <strong>machine learning</strong>.
+                        <br>Preprocessed images (grayscale, thresholding, etc.) and extracted <strong>ORB features</strong>.
+                        <br>Used <strong>brute-force matching</strong> (Hamming distance) and <strong>KMeans clustering</strong> to group similar logos.
                         <br>Implemented both manual and automatic comparison modes.
-                        <br>Designed a **GUI** to visualize clusters and match results in a user-friendly way.
+                        <br>Designed a <strong>GUI</strong> to visualize clusters and match results in a user-friendly way.
                     </div>
                     <div class="item-sub">Tech: Python, OpenCV, scikit‑learn · May 2025</div>
                 </div>
@@ -142,8 +152,8 @@
                 <div class="item">
                     <div class="item-title">Hotel Reservation System — <a href="#">Github</a></div>
                     <div class="item-sub">
-                        • **Relational database** with six tables managing hotel operations.
-                        <br>The system includes **customer management**, **reservation tracking**, and automatic **availability updates** based on **SQL queries**.
+                        • <strong>Relational database</strong> with six tables managing hotel operations.
+                        <br>The system includes <strong>customer management</strong>, <strong>reservation tracking</strong>, and automatic <strong>availability updates</strong> based on <strong>SQL queries</strong>.
                     </div>
                     <div class="item-sub">Tech: SQL · Dec 2024</div>
                 </div>
@@ -151,11 +161,11 @@
                 <div class="item">
                     <div class="item-title">DistributedDocDB — <a href="https://github.com/mihaelacoman1/DistributedDocDB">Github</a></div>
                     <div class="item-sub">
-                        • Designed and implemented a **TCP-based client-server document database** in **Java**.
-                        <br>Supported custom commands (**PUT, GET, DELETE**) for file upload, download, and removal between client and server.
-                        <br>Handled **concurrency** on the server side using **multithreading** for simultaneous client connections.
-                        <br>Built custom **data structures** (e.g., HashMap, LinkedList, PriorityQueue) for internal document management.
-                        <br>Stored documents locally on the server and ensured **response consistency** across multiple requests.
+                        • Designed and implemented a <strong>TCP-based client-server document database</strong> in <strong>Java</strong>.
+                        <br>Supported custom commands (<strong>PUT, GET, DELETE</strong>) for file upload, download, and removal between client and server.
+                        <br>Handled <strong>concurrency</strong> on the server side using <strong>multithreading</strong> for simultaneous client connections.
+                        <br>Built custom <strong>data structures</strong> (e.g., HashMap, LinkedList, PriorityQueue) for internal document management.
+                        <br>Stored documents locally on the server and ensured <strong>response consistency</strong> across multiple requests.
                     </div>
                     <div class="item-sub">Tech: Java · Aug 2024</div>
                 </div>
@@ -163,8 +173,8 @@
                 <div class="item">
                     <div class="item-title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
                     <div class="item-sub">
-                        • Calculates sum between a **factorial** and vector minimum.
-                        <br>Used **recursion** for factorial calculation and **optimized memory access** in **Assembly** to compute results efficiently for any vector size.
+                        • Calculates sum between a <strong>factorial</strong> and vector minimum.
+                        <br>Used <strong>recursion</strong> for factorial calculation and <strong>optimized memory access</strong> in <strong>Assembly</strong> to compute results efficiently for any vector size.
                     </div>
                     <div class="item-sub">Tech: Assembly · Dec 2023</div>
                 </div>
@@ -176,7 +186,7 @@
                 <div class="item">
                     <div class="item-title">HackITall — Trading Bot </div>
                     <div class="item-sub">
-                        • Implemented a stock trading bot that monitored **real-time market data** to detect low-price opportunities for buying and high-price conditions for selling. Designed logic for **position limits** to reduce risk and **maximize profit** during stock fluctuations.
+                        • Implemented a stock trading bot that monitored <strong>real-time market data</strong> to detect low-price opportunities for buying and high-price conditions for selling. Designed logic for <strong>position limits</strong> to reduce risk and <strong>maximize profit</strong> during stock fluctuations.
                         <br>Developed a strategy to balance **execution efficiency** with **risk management** in volatile market conditions.
                     </div>
                     <div class="item-sub">Tech: Python · Dec 2024</div>
@@ -185,9 +195,9 @@
                 <div class="item">
                     <div class="item-title">Security Summer School, POLITEHNICA Bucharest </div>
                     <div class="item-sub">
-                        • Participated in the Binary Security module: learned **static and dynamic binary analysis**, **vulnerability discovery**, exploitation
-                        techniques, and **reverse engineering** using **GDB** and disassemblers. Worked on real-world **CTF-style challenges** based on
-                        **buffer overflows**, canaries, memory layout inspection, and **shellcode injection**. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a>
+                        • Participated in the Binary Security module: learned <strong>static and dynamic binary analysis</strong>, <strong>vulnerability discovery</strong>, exploitation
+                        techniques, and <strong>reverse engineering</strong> using <strong>GDB</strong> and disassemblers. Worked on real-world <strong>CTF-style challenges</strong> based on
+                        <strong>buffer overflows</strong>, canaries, memory layout inspection, and **shellcode injection**. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a>
                     </div>
                     <div class="item-sub">Tech: Java · June-Aug 2025</div>
                 </div>
@@ -196,6 +206,8 @@
         </div>
 
         <div class="right">
+            <img src="https://assets-global.website-files.com/62432a18fcc180c47952aab2/630137a77d197600868a25ea_image-asset.jpeg" alt="Mihaela Adelina Coman" class="profile-pic">
+
             <div class="section">
                 <h2>Education</h2>
                 <div class="item">
