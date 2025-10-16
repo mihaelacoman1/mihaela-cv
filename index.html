@@ -7,7 +7,9 @@
     <style>
         body {
             margin: 0;
-            font-family: system-ui, sans-serif;
+            /* Am ales un font modern, curat, care se aseamănă cu cel din CV-ul Teodorei */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            font-weight: 400; /* Font mai subțire pentru un aspect curat */
             background: white;
             color: #111;
         }
@@ -17,24 +19,24 @@
             margin: 0 auto;
         }
         .left {
-            flex: 2; /* Lățime mai mare pentru conținutul principal */
+            flex: 2;
             padding: 40px 24px;
             border-right: 1px solid #ccc;
         }
         .right {
-            flex: 1; /* Lățime mai mică pentru secțiunile scurte */
+            flex: 1;
             padding: 40px 24px;
             background: #f9f9f9;
-            text-align: center; /* Centrează imaginea și, eventual, alte elemente din dreapta */
+            text-align: center;
         }
         /* Stil pentru imaginea de profil */
         .profile-pic {
-            width: 120px; /* Dimensiune fixă */
-            height: 120px; /* Dimensiune fixă */
-            border-radius: 50%; /* Face imaginea circulară */
-            object-fit: cover; /* Asigură că imaginea se încadrează bine în cerc */
-            margin-bottom: 20px; /* Spațiu sub imagine */
-            border: 2px solid #ccc; /* Opțional: o bordură subțire */
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
         }
 
         h1 {
@@ -43,6 +45,7 @@
         }
         .section {
             margin-bottom: 32px;
+            text-align: left; /* Asigură că toate secțiunile sunt aliniate la stânga */
         }
         .section h2 {
             font-size: 14px;
@@ -57,17 +60,33 @@
         .section .item-title {
             font-weight: bold;
         }
-        /* Asigură că textul de descriere este negru (#111) */
+        /* Stil uniform pentru toate detaliile textuale */
         .section .item-sub {
             font-size: 13px;
-            color: #111; 
-            /* Stilul pentru un singur bullet point la început */
-            padding-left: 15px; /* Spațiu pentru bullet point */
-            text-indent: -15px; /* Mută textul bullet point-ului înapoi, dar nu și rândurile următoare */
+            color: #111;
+            margin-top: 2px; /* Spațiu mic între titlu și detalii */
         }
+        
+        /* MODIFICARI PENTRU STILUL TEODOREI - FARA INDENTARE, UN SINGUR BULLET POINT */
+        .portfolio-detail {
+            font-size: 13px;
+            color: #111;
+            padding-left: 15px; /* Spațiu pentru bullet point */
+            text-indent: -15px; /* Mută bullet point-ul, dar textul rămâne lipit de marginea stângă */
+            margin-top: 5px; /* Spațiu între detaliile proiectului */
+            line-height: 1.5; /* Spațiu mai mare între rânduri */
+        }
+
+        /* Stil special pentru detalii de educație și experiență (pentru a elimina spațiul dintre rânduri) */
+        .right .item-sub, .left .item-sub {
+             /* Elimină marginile standard care dau spațiu nedorit */
+             margin: 0; 
+             padding: 0;
+        }
+        
         /* Eliminăm stilul implicit al listelor */
         ul {
-            list-style: none; /* Scoatem punctele implicite */
+            list-style: none;
             padding-left: 0;
         }
         ul li {
@@ -91,6 +110,20 @@
         a {
             color: #0b57d0;
             text-decoration: none;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        /* Aliniere la stânga pentru elementele din coloana dreaptă, sub titlu */
+        .right .section {
+            text-align: left;
+        }
+        /* Asigură că textul de sub Education este pe același rând (sau cât mai compact) */
+        .right .item-title + .item-sub {
+            margin-top: 0;
+            font-style: italic; /* Opțional, pentru a evidenția perioada */
         }
     </style>
 </head>
@@ -119,7 +152,7 @@
 
                 <div class="item">
                     <div class="item-title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • <strong>End‑to‑end testing suite</strong> simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.
                         <br>Implemented using <strong>Cypress</strong> with <strong>page object model</strong>, assertions, and reusable test cases.
                         <br>Covered both <strong>positive and negative scenarios</strong> to ensure <strong>robust UI/UX flows</strong>.
@@ -129,7 +162,7 @@
 
                 <div class="item">
                     <div class="item-title">Video Rental App — <a href="https://github.com/mihaelacoman1/video-rental-app">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • <strong>Full-stack web platform</strong> developed in <strong>C#</strong> for managing film rentals, including <strong>user authentication</strong> and transactions.
                         <br>Allows users to <strong>search</strong>, view details, and <strong>rent movies</strong>, while managing <strong>available stock</strong> and transaction history.
                         <br>The project focuses on maintaining <strong>data consistency</strong> and providing a smooth user experience.
@@ -139,7 +172,7 @@
                 
                 <div class="item">
                     <div class="item-title">Logo Matching Clustering — <a href="https://github.com/mihaelacoman1/logo-matching-clustering">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • Developed a <strong>Python tool</strong> for clustering visually similar logos using <strong>image processing</strong> and <strong>machine learning</strong>.
                         <br>Preprocessed images (grayscale, thresholding, etc.) and extracted <strong>ORB features</strong>.
                         <br>Used <strong>brute-force matching</strong> (Hamming distance) and <strong>KMeans clustering</strong> to group similar logos.
@@ -151,7 +184,7 @@
 
                 <div class="item">
                     <div class="item-title">Hotel Reservation System — <a href="#">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • <strong>Relational database</strong> with six tables managing hotel operations.
                         <br>The system includes <strong>customer management</strong>, <strong>reservation tracking</strong>, and automatic <strong>availability updates</strong> based on <strong>SQL queries</strong>.
                     </div>
@@ -160,7 +193,7 @@
                 
                 <div class="item">
                     <div class="item-title">DistributedDocDB — <a href="https://github.com/mihaelacoman1/DistributedDocDB">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • Designed and implemented a <strong>TCP-based client-server document database</strong> in <strong>Java</strong>.
                         <br>Supported custom commands (<strong>PUT, GET, DELETE</strong>) for file upload, download, and removal between client and server.
                         <br>Handled <strong>concurrency</strong> on the server side using <strong>multithreading</strong> for simultaneous client connections.
@@ -172,7 +205,7 @@
 
                 <div class="item">
                     <div class="item-title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • Calculates sum between a <strong>factorial</strong> and vector minimum.
                         <br>Used <strong>recursion</strong> for factorial calculation and <strong>optimized memory access</strong> in <strong>Assembly</strong> to compute results efficiently for any vector size.
                     </div>
@@ -185,7 +218,7 @@
                 <h2>Extracurricular</h2>
                 <div class="item">
                     <div class="item-title">HackITall — Trading Bot </div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • Implemented a stock trading bot that monitored <strong>real-time market data</strong> to detect low-price opportunities for buying and high-price conditions for selling. Designed logic for <strong>position limits</strong> to reduce risk and <strong>maximize profit</strong> during stock fluctuations.
                         <br>Developed a strategy to balance <strong>execution efficiency</strong> with <strong>risk management</strong> in volatile market conditions.
                     </div>
@@ -194,7 +227,7 @@
 
                 <div class="item">
                     <div class="item-title">Security Summer School, POLITEHNICA Bucharest </div>
-                    <div class="item-sub">
+                    <div class="portfolio-detail">
                         • Participated in the Binary Security module: learned <strong>static and dynamic binary analysis</strong>, <strong>vulnerability discovery</strong>, exploitation
                         techniques, and <strong>reverse engineering</strong> using <strong>GDB</strong> and disassemblers. Worked on real-world <strong>CTF-style challenges</strong> based on
                         <strong>buffer overflows</strong>, canaries, memory layout inspection, and <strong>shellcode injection</strong>. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a>
