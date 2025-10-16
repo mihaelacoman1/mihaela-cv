@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            /* Font modern, curat și subțire pentru un aspect "caligrafic" */
+            /* Font modern, curat și subțire */
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
             font-weight: 400; 
             background: white;
@@ -55,51 +55,36 @@
             margin-bottom: 10px;
         }
         .section .item {
-            margin-bottom: 12px;
+            margin-bottom: 16px; /* Spațiu mai mare între proiecte */
         }
         .section .item-title {
             font-weight: bold;
+            margin-bottom: 4px; /* Spațiu mic sub titlu */
         }
         
-        /* STILUL PENTRU DESCRIERI (EXPERIENCE) - FONT CURAT, FARA INDENTARE LA RAND NOU */
-        .experience-detail {
+        /* STIL LISTĂ DETALII (PENTRU EXPERIENCE, PORTFOLIO, EXTRACURRICULAR) */
+        .detail-list {
+            /* Elimină stilul implicit al listei, pentru a-l seta pe cel dorit */
+            list-style-type: disc; 
+            padding-left: 18px; /* Indentare mică pentru bullet point */
+            margin: 0; 
             font-size: 13px;
-            color: #111;
-            margin-top: 5px; 
             line-height: 1.5;
-            padding-left: 0; 
-            text-indent: 0;
-            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
+            color: #111;
         }
-        
-        /* STILUL PENTRU DESCRIERI (PORTFOLIO, EXTRACURRICULAR) CU BULLET POINT UNIC ȘI FONT CURAT */
-        .portfolio-detail {
-            font-size: 13px;
-            color: #111;
-            margin-top: 5px; 
-            line-height: 1.5;
-            padding-left: 15px; /* Spațiu pentru bullet point */
-            text-indent: -15px; /* Mută bullet point-ul, dar textul rămâne lipit de marginea stângă */
-            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
+        .detail-list li {
+            margin-bottom: 0px; /* Fără spațiu între rândurile listei */
         }
 
-        /* Stil uniform pentru toate detaliile textuale (incl. data/tech) și Education */
+        /* Stil uniform pentru detalii data/tech și Education */
         .section .item-sub {
             font-size: 13px;
             color: #111; 
             margin: 0; 
             padding: 0;
-            line-height: 1.5; /* Mărește puțin spațiul pe verticală la Education */
         }
         
-        /* Eliminăm stilul implicit al listelor */
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 4px;
-        }
+        /* Styling pentru Languages (punctele colorate) */
         .dots span {
             display: inline-block;
             width: 10px;
@@ -111,9 +96,12 @@
         .dots .full {
             background: #2b73ff;
         }
-        .skills ul li strong {
-            display: inline-block;
-            width: 100px;
+        .skills ul {
+            list-style: disc; /* Puncte pentru SKILLS */
+            padding-left: 18px;
+        }
+        .skills ul li {
+            margin-bottom: 8px;
         }
         a {
             color: #0b57d0;
@@ -143,9 +131,13 @@
                 <h2>Experience</h2>
                 <div class="item">
                     <div class="item-title">Game Tester, Electronic Arts <span style="float:right">July – Oct 2024</span></div>
-                    <div class="experience-detail">
-                        Learned bug reporting and testing procedures. Participated in beta testing sessions, improved <strong>teamwork</strong> and <strong>communication</strong> in QA environments. Explored gameplay scenarios across multiple platforms and identified <strong>critical issues</strong> with detailed reproduction steps. Became familiar with <strong>Agile processes</strong> and bug tracking tools such as <strong>JIRA</strong>. Gained strong <strong>attention to detail</strong>, patience, and <strong>analytical thinking</strong> through iterative test cycles.
-                    </div>
+                    <ul class="detail-list">
+                        <li>Learned bug reporting and testing procedures.</li>
+                        <li>Participated in beta testing sessions, improved <strong>teamwork</strong> and <strong>communication</strong> in QA environments.</li>
+                        <li>Explored gameplay scenarios across multiple platforms and identified <strong>critical issues</strong> with detailed reproduction steps.</li>
+                        <li>Became familiar with <strong>Agile processes</strong> and bug tracking tools such as **JIRA**.</li>
+                        <li>Gained strong <strong>attention to detail</strong>, patience, and <strong>analytical thinking</strong> through iterative test cycles.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -154,63 +146,63 @@
 
                 <div class="item">
                     <div class="item-title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>End‑to‑end testing suite</strong> simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.
-                        <br>Implemented using <strong>Cypress</strong> with <strong>page object model</strong>, assertions, and reusable test cases.
-                        <br>Covered both <strong>positive and negative scenarios</strong> to ensure <strong>robust UI/UX flows</strong>.
-                    </div>
+                    <ul class="detail-list">
+                        <li>**End‑to‑end testing suite** simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.</li>
+                        <li>Implemented using **Cypress** with **page object model**, assertions, and reusable test cases.</li>
+                        <li>Covered both **positive and negative scenarios** to ensure **robust UI/UX flows**.</li>
+                    </ul>
                     <div class="item-sub">Tech: JavaScript, Cypress · July 2025</div>
                 </div>
 
                 <div class="item">
                     <div class="item-title">Video Rental App — <a href="https://github.com/mihaelacoman1/video-rental-app">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>Full-stack web platform</strong> developed in <strong>C#</strong> for managing film rentals, including <strong>user authentication</strong> and transactions.
-                        <br>Allows users to <strong>search</strong>, view details, and <strong>rent movies</strong>, while managing <strong>available stock</strong> and transaction history.
-                        <br>The project focuses on maintaining <strong>data consistency</strong> and providing a smooth user experience.
-                    </div>
+                    <ul class="detail-list">
+                        <li>**Full-stack web platform** developed in **C#** for managing film rentals, including **user authentication** and transactions.</li>
+                        <li>Allows users to **search**, view details, and **rent movies**, while managing **available stock** and transaction history.</li>
+                        <li>The project focuses on maintaining **data consistency** and providing a smooth user experience.</li>
+                    </ul>
                     <div class="item-sub">Tech: C#, .NET, SQL · May 2025</div>
                 </div>
                 
                 <div class="item">
                     <div class="item-title">Logo Matching Clustering — <a href="https://github.com/mihaelacoman1/logo-matching-clustering">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Developed a <strong>Python tool</strong> for clustering visually similar logos using <strong>image processing</strong> and <strong>machine learning</strong>.
-                        <br>Preprocessed images (grayscale, thresholding, etc.) and extracted <strong>ORB features</strong>.
-                        <br>Used <strong>brute-force matching</strong> (Hamming distance) and <strong>KMeans clustering</strong> to group similar logos.
-                        <br>Implemented both manual and automatic comparison modes.
-                        <br>Designed a <strong>GUI</strong> to visualize clusters and match results in a user-friendly way.
-                    </div>
+                    <ul class="detail-list">
+                        <li>Developed a **Python tool** for clustering visually similar logos using **image processing** and **machine learning**.</li>
+                        <li>Preprocessed images (grayscale, thresholding, etc.) and extracted **ORB features**.</li>
+                        <li>Used **brute-force matching** (Hamming distance) and **KMeans clustering** to group similar logos.</li>
+                        <li>Implemented both manual and automatic comparison modes.</li>
+                        <li>Designed a **GUI** to visualize clusters and match results in a user-friendly way.</li>
+                    </ul>
                     <div class="item-sub">Tech: Python, OpenCV, scikit‑learn · May 2025</div>
                 </div>
 
                 <div class="item">
                     <div class="item-title">Hotel Reservation System — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>Relational database</strong> with six tables managing hotel operations.
-                        <br>The system includes <strong>customer management</strong>, <strong>reservation tracking</strong>, and automatic <strong>availability updates</strong> based on <strong>SQL queries</strong>.
-                    </div>
+                    <ul class="detail-list">
+                        <li>**Relational database** with six tables managing hotel operations.</li>
+                        <li>The system includes **customer management**, **reservation tracking**, and automatic **availability updates** based on **SQL queries**.</li>
+                    </ul>
                     <div class="item-sub">Tech: SQL · Dec 2024</div>
                 </div>
                 
                 <div class="item">
                     <div class="item-title">DistributedDocDB — <a href="https://github.com/mihaelacoman1/DistributedDocDB">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Designed and implemented a <strong>TCP-based client-server document database</strong> in <strong>Java</strong>.
-                        <br>Supported custom commands (<strong>PUT, GET, DELETE</strong>) for file upload, download, and removal between client and server.
-                        <br>Handled <strong>concurrency</strong> on the server side using <strong>multithreading</strong> for simultaneous client connections.
-                        <br>Built custom <strong>data structures</strong> (e.g., HashMap, LinkedList, PriorityQueue) for internal document management.
-                        <br>Stored documents locally on the server and ensured <strong>response consistency</strong> across multiple requests.
-                    </div>
+                    <ul class="detail-list">
+                        <li>Designed and implemented a **TCP-based client-server document database** in **Java**.</li>
+                        <li>Supported custom commands (**PUT, GET, DELETE**) for file upload, download, and removal between client and server.</li>
+                        <li>Handled **concurrency** on the server side using **multithreading** for simultaneous client connections.</li>
+                        <li>Built custom **data structures** (e.g., HashMap, LinkedList, PriorityQueue) for internal document management.</li>
+                        <li>Stored documents locally on the server and ensured **response consistency** across multiple requests.</li>
+                    </ul>
                     <div class="item-sub">Tech: Java · Aug 2024</div>
                 </div>
 
                 <div class="item">
                     <div class="item-title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Calculates sum between a <strong>factorial</strong> and vector minimum.
-                        <br>Used <strong>recursion</strong> for factorial calculation and <strong>optimized memory access</strong> in <strong>Assembly</strong> to compute results efficiently for any vector size.
-                    </div>
+                    <ul class="detail-list">
+                        <li>Calculates sum between a **factorial** and vector minimum.</li>
+                        <li>Used **recursion** for factorial calculation and **optimized memory access** in **Assembly** to compute results efficiently for any vector size.</li>
+                    </ul>
                     <div class="item-sub">Tech: Assembly · Dec 2023</div>
                 </div>
 
@@ -220,20 +212,21 @@
                 <h2>Extracurricular</h2>
                 <div class="item">
                     <div class="item-title">HackITall — Trading Bot </div>
-                    <div class="portfolio-detail">
-                        • Implemented a stock trading bot that monitored <strong>real-time market data</strong> to detect low-price opportunities for buying and high-price conditions for selling. Designed logic for <strong>position limits</strong> to reduce risk and <strong>maximize profit</strong> during stock fluctuations.
-                        <br>Developed a strategy to balance <strong>execution efficiency</strong> with <strong>risk management</strong> in volatile market conditions.
-                    </div>
+                    <ul class="detail-list">
+                        <li>Implemented a stock trading bot that monitored **real-time market data** to detect low-price opportunities for buying and high-price conditions for selling.</li>
+                        <li>Designed logic for **position limits** to reduce risk and **maximize profit** during stock fluctuations.</li>
+                        <li>Developed a strategy to balance **execution efficiency** with **risk management** in volatile market conditions.</li>
+                    </ul>
                     <div class="item-sub">Tech: Python · Dec 2024</div>
                 </div>
 
                 <div class="item">
                     <div class="item-title">Security Summer School, POLITEHNICA Bucharest </div>
-                    <div class="portfolio-detail">
-                        • Participated in the Binary Security module: learned <strong>static and dynamic binary analysis</strong>, <strong>vulnerability discovery</strong>, exploitation
-                        techniques, and <strong>reverse engineering</strong> using <strong>GDB</strong> and disassemblers. Worked on real-world <strong>CTF-style challenges</strong> based on
-                        <strong>buffer overflows</strong>, canaries, memory layout inspection, and <strong>shellcode injection</strong>. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a>
-                    </div>
+                    <ul class="detail-list">
+                        <li>Participated in the Binary Security module: learned **static and dynamic binary analysis**, **vulnerability discovery**, exploitation
+                        techniques, and **reverse engineering** using **GDB** and disassemblers.</li>
+                        <li>Worked on real-world **CTF-style challenges** based on **buffer overflows**, canaries, memory layout inspection, and **shellcode injection**. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a></li>
+                    </ul>
                     <div class="item-sub">Tech: Java · June-Aug 2025</div>
                 </div>
             </div>
