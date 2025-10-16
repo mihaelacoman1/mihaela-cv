@@ -61,7 +61,7 @@
             font-weight: bold;
         }
         
-        /* STILUL PENTRU DESCRIERI (EXPERIENCE) */
+        /* STILUL PENTRU DESCRIERI (EXPERIENCE) - FONT CURAT, FARA INDENTARE LA RAND NOU */
         .experience-detail {
             font-size: 13px;
             color: #111;
@@ -69,9 +69,10 @@
             line-height: 1.5;
             padding-left: 0; 
             text-indent: 0;
+            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
         }
         
-        /* STILUL PENTRU DESCRIERI (PORTFOLIO, EXTRACURRICULAR) CU BULLET POINT UNIC */
+        /* STILUL PENTRU DESCRIERI (PORTFOLIO, EXTRACURRICULAR) CU BULLET POINT UNIC ȘI FONT CURAT */
         .portfolio-detail {
             font-size: 13px;
             color: #111;
@@ -79,14 +80,16 @@
             line-height: 1.5;
             padding-left: 15px; /* Spațiu pentru bullet point */
             text-indent: -15px; /* Mută bullet point-ul, dar textul rămâne lipit de marginea stângă */
+            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
         }
 
-        /* Stil uniform pentru toate detaliile textuale (incl. data/tech) */
+        /* Stil uniform pentru toate detaliile textuale (incl. data/tech) și Education */
         .section .item-sub {
             font-size: 13px;
             color: #111; 
             margin: 0; 
             padding: 0;
+            line-height: 1.5; /* Mărește puțin spațiul pe verticală la Education */
         }
         
         /* Eliminăm stilul implicit al listelor */
