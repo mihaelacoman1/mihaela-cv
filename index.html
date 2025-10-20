@@ -1,298 +1,434 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mihaela‑Adelina Coman — CV</title>
     <style>
-        body {
-            margin: 0;
-            /* Font modern, curat și subțire pentru un aspect "caligrafic" */
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            font-weight: 400; 
-            background: white;
-            color: #111;
-        }
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .left {
-            flex: 2;
-            padding: 40px 24px;
-            border-right: 1px solid #ccc;
-        }
-        .right {
-            flex: 1;
-            padding: 40px 24px;
-            background: #f9f9f9;
-            text-align: center;
-        }
-        /* Stil pentru imaginea de profil */
-       .profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;  /* 🔍 Poziționează fața mai sus în cerc */
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
-        }
+      body {
+        margin: 0;
+        /* Font modern, curat și subțire pentru un aspect "caligrafic" */
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        background: white;
+        color: #111;
+      }
+      .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .left {
+        flex: 2;
+        padding: 40px 24px;
+        border-right: 1px solid #ccc;
+      }
+      .right {
+        flex: 1;
+        padding: 40px 24px;
+        background: #f9f9f9;
+        text-align: center;
+      }
+      /* Stil pentru imaginea de profil */
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        object-fit: cover;
+        border: 2px solid #ccc;
+      }
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 32px;
-            text-align: left;
-        }
-        .section h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            border-bottom: 2px solid black;
-            padding-bottom: 4px;
-            margin-bottom: 10px;
-        }
-        .section .item {
-            margin-bottom: 12px;
-        }
-        .section .item-title {
-            font-weight: bold;
-        }
-        
-        /* STILUL PENTRU DESCRIERI (EXPERIENCE) - FONT CURAT, FARA INDENTARE LA RAND NOU */
-        .experience-detail {
-            font-size: 13px;
-            color: #111;
-            margin-top: 5px; 
-            line-height: 1.5;
-            padding-left: 0; 
-            text-indent: 0;
-            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
-        }
-        
-        /* STILUL PENTRU DESCRIERI (PORTFOLIO, EXTRACURRICULAR) CU BULLET POINT UNIC ȘI FONT CURAT */
-        .portfolio-detail {
-            font-size: 13px;
-            color: #111;
-            margin-top: 5px; 
-            line-height: 1.5;
-            padding-left: 15px; /* Spațiu pentru bullet point */
-            text-indent: -15px; /* Mută bullet point-ul, dar textul rămâne lipit de marginea stângă */
-            text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
-        }
+      .pfp-container {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        /* Stil uniform pentru toate detaliile textuale (incl. data/tech) și Education */
-        .section .item-sub {
-            font-size: 13px;
-            color: #111; 
-            margin: 0; 
-            padding: 0;
-            line-height: 1.5; /* Mărește puțin spațiul pe verticală la Education */
-        }
-        
-        /* Eliminăm stilul implicit al listelor */
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 4px;
-        }
-        .dots span {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin-left: 4px;
-            border-radius: 50%;
-            background: #ccc;
-        }
-        .dots .full {
-            background: #2b73ff;
-        }
-        .skills ul li strong {
-            display: inline-block;
-            width: 100px;
-        }
-        a {
-            color: #0b57d0;
-            text-decoration: none;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 10px 0;
-        }
-        .right .section {
-            text-align: left;
-        }
-        /* Asigură că Certificările au bullet points */
-        .section ul {
-            list-style: disc;
-            padding-left: 18px;
-        }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .section {
+        margin-bottom: 32px;
+        text-align: left;
+      }
+      .section h2 {
+        font-size: 14px;
+        text-transform: uppercase;
+        border-bottom: 2px solid black;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+      }
+      .section .item {
+        margin-bottom: 12px;
+      }
+      .section .item-title {
+        font-weight: bold;
+      }
+
+      /* STILUL PENTRU DESCRIERI (EXPERIENCE) - FONT CURAT, FARA INDENTARE LA RAND NOU */
+      .experience-detail {
+        font-size: 13px;
+        color: #111;
+        margin-top: 5px;
+        line-height: 1.5;
+        padding-left: 0;
+        text-indent: 0;
+        text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
+      }
+
+      /* STILUL PENTRU DESCRIERI (PORTFOLIO, EXTRACURRICULAR) CU BULLET POINT UNIC ȘI FONT CURAT */
+      .portfolio-detail {
+        font-size: 13px;
+        color: #111;
+        margin-top: 5px;
+        line-height: 1.5;
+        padding-left: 15px; /* Spațiu pentru bullet point */
+        text-indent: -15px; /* Mută bullet point-ul, dar textul rămâne lipit de marginea stângă */
+        text-align: justify; /* Opțional: justifică textul pentru un aspect mai profesional */
+      }
+
+      /* Stil uniform pentru toate detaliile textuale (incl. data/tech) și Education */
+      .section .item-sub {
+        font-size: 13px;
+        color: #111;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5; /* Mărește puțin spațiul pe verticală la Education */
+      }
+
+      /* Eliminăm stilul implicit al listelor */
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      ul li {
+        margin-bottom: 4px;
+      }
+      .dots span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+      .dots .full {
+        background: #2b73ff;
+      }
+      .skills ul li strong {
+        display: inline-block;
+        width: 100px;
+      }
+      a {
+        color: #0b57d0;
+        text-decoration: none;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+      }
+      .right .section {
+        text-align: left;
+      }
+      /* Asigură că Certificările au bullet points */
+      .section ul {
+        list-style: disc;
+        padding-left: 18px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="left">
-            <h1>Mihaela‑Adelina Coman</h1>
+      <div class="left">
+        <h1>Mihaela‑Adelina Coman</h1>
 
-            <p>Email: <a href="mailto:mihaela.coman@example.com">mihaela.coman@example.com</a></p>
-            <p>Phone: +40 712 345 678</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mihaelacoman1">linkedin.com/in/mihaelacoman1</a></p>
-            <p>GitHub: <a href="https://github.com/mihaelacoman1">github.com/mihaelacoman1</a></p>
+        <p>
+          Email:
+          <a href="mailto:mihaela.coman@example.com"
+            >mihaela.coman@example.com</a
+          >
+        </p>
+        <p>Phone: +40 712 345 678</p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/mihaelacoman1"
+            >linkedin.com/in/mihaelacoman1</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/mihaelacoman1"
+            >github.com/mihaelacoman1</a
+          >
+        </p>
 
-            <div class="section">
-                <h2>Experience</h2>
-                <div class="item">
-                    <div class="item-title">Game Tester, Electronic Arts <span style="float:right">July – Oct 2024</span></div>
-                    <div class="experience-detail">
-                        Learned bug reporting and testing procedures. Participated in beta testing sessions, improved <strong>teamwork</strong> and <strong>communication</strong> in QA environments. Explored gameplay scenarios across multiple platforms and identified <strong>critical issues</strong> with detailed reproduction steps. Became familiar with <strong>Agile processes</strong> and bug tracking tools such as <strong>JIRA</strong>. Gained strong <strong>attention to detail</strong>, patience, and <strong>analytical thinking</strong> through iterative test cycles.
-                    </div>
-                </div>
+        <div class="section">
+          <h2>Experience</h2>
+          <div class="item">
+            <div class="item-title">
+              Game Tester, Electronic Arts
+              <span style="float: right">July – Oct 2024</span>
             </div>
-
-            <div class="section">
-                <h2>Portfolio</h2>
-
-                <div class="item">
-                    <div class="item-title">Cypress E‑Commerce Full Flow — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>End‑to‑end testing suite</strong> simulating a full user journey on an e‑commerce platform: registration, login, product search, add to cart, checkout, and logout.
-                        <br>Implemented using <strong>Cypress</strong> with <strong>page object model</strong>, assertions, and reusable test cases.
-                        <br>Covered both <strong>positive and negative scenarios</strong> to ensure <strong>robust UI/UX flows</strong>.
-                    </div>
-                    <div class="item-sub">Tech: JavaScript, Cypress · July 2025</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">Video Rental App — <a href="https://github.com/mihaelacoman1/video-rental-app">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>Full-stack web platform</strong> developed in <strong>C#</strong> for managing film rentals, including <strong>user authentication</strong> and transactions.
-                        <br>Allows users to <strong>search</strong>, view details, and <strong>rent movies</strong>, while managing <strong>available stock</strong> and transaction history.
-                        <br>The project focuses on maintaining <strong>data consistency</strong> and providing a smooth user experience.
-                    </div>
-                    <div class="item-sub">Tech: C#, .NET, SQL · May 2025</div>
-                </div>
-                
-                <div class="item">
-                    <div class="item-title">Logo Matching Clustering — <a href="https://github.com/mihaelacoman1/logo-matching-clustering">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Developed a <strong>Python tool</strong> for clustering visually similar logos using <strong>image processing</strong> and <strong>machine learning</strong>.
-                        <br>Preprocessed images (grayscale, thresholding, etc.) and extracted <strong>ORB features</strong>.
-                        <br>Used <strong>brute-force matching</strong> (Hamming distance) and <strong>KMeans clustering</strong> to group similar logos.
-                        <br>Implemented both manual and automatic comparison modes.
-                        <br>Designed a <strong>GUI</strong> to visualize clusters and match results in a user-friendly way.
-                    </div>
-                    <div class="item-sub">Tech: Python, OpenCV, scikit‑learn · May 2025</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">Hotel Reservation System — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • <strong>Relational database</strong> with six tables managing hotel operations.
-                        <br>The system includes <strong>customer management</strong>, <strong>reservation tracking</strong>, and automatic <strong>availability updates</strong> based on <strong>SQL queries</strong>.
-                    </div>
-                    <div class="item-sub">Tech: SQL · Dec 2024</div>
-                </div>
-                
-                <div class="item">
-                    <div class="item-title">DistributedDocDB — <a href="https://github.com/mihaelacoman1/DistributedDocDB">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Designed and implemented a <strong>TCP-based client-server document database</strong> in <strong>Java</strong>.
-                        <br>Supported custom commands (<strong>PUT, GET, DELETE</strong>) for file upload, download, and removal between client and server.
-                        <br>Handled <strong>concurrency</strong> on the server side using <strong>multithreading</strong> for simultaneous client connections.
-                        <br>Built custom <strong>data structures</strong> (e.g., HashMap, LinkedList, PriorityQueue) for internal document management.
-                        <br>Stored documents locally on the server and ensured <strong>response consistency</strong> across multiple requests.
-                    </div>
-                    <div class="item-sub">Tech: Java · Aug 2024</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">Factorial Fusion (Assembly) — <a href="#">Github</a></div>
-                    <div class="portfolio-detail">
-                        • Calculates sum between a <strong>factorial</strong> and vector minimum.
-                        <br>Used <strong>recursion</strong> for factorial calculation and <strong>optimized memory access</strong> in <strong>Assembly</strong> to compute results efficiently for any vector size.
-                    </div>
-                    <div class="item-sub">Tech: Assembly · Dec 2023</div>
-                </div>
-
+            <div class="experience-detail">
+              Learned bug reporting and testing procedures. Participated in beta
+              testing sessions, improved <strong>teamwork</strong> and
+              <strong>communication</strong> in QA environments. Explored
+              gameplay scenarios across multiple platforms and identified
+              <strong>critical issues</strong> with detailed reproduction steps.
+              Became familiar with <strong>Agile processes</strong> and bug
+              tracking tools such as <strong>JIRA</strong>. Gained strong
+              <strong>attention to detail</strong>, patience, and
+              <strong>analytical thinking</strong> through iterative test
+              cycles.
             </div>
-
-            <div class="section">
-                <h2>Extracurricular</h2>
-                <div class="item">
-                    <div class="item-title">HackITall — Trading Bot </div>
-                    <div class="portfolio-detail">
-                        • Implemented a stock trading bot that monitored <strong>real-time market data</strong> to detect low-price opportunities for buying and high-price conditions for selling. Designed logic for <strong>position limits</strong> to reduce risk and <strong>maximize profit</strong> during stock fluctuations.
-                        <br>Developed a strategy to balance <strong>execution efficiency</strong> with <strong>risk management</strong> in volatile market conditions.
-                    </div>
-                    <div class="item-sub">Tech: Python · Dec 2024</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">Security Summer School, POLITEHNICA Bucharest </div>
-                    <div class="portfolio-detail">
-                        • Participated in the Binary Security module: learned <strong>static and dynamic binary analysis</strong>, <strong>vulnerability discovery</strong>, exploitation
-                        <br>techniques, and <strong>reverse engineering</strong> using <strong>GDB</strong> and disassemblers. Worked on real-world <strong>CTF-style challenges</strong> based on
-                        <br><strong>buffer overflows</strong>, canaries, memory layout inspection, and <strong>shellcode injection</strong>. <a href="https://open-education-hub.github.io/binary-security/" target="_blank">More info</a>
-                    </div>
-                    <div class="item-sub">Tech: Java · June-Aug 2025</div>
-                </div>
-            </div>
-
+          </div>
         </div>
 
-        <div class="right">
-            
-           <img src="https://i.imgur.com/q4mxKan.jpg" alt="Mihaela Adelina Coman" class="profile-pic">
+        <div class="section">
+          <h2>Portfolio</h2>
 
-            <div class="section">
-                <h2>Education</h2>
-                <div class="item">
-                    <div class="item-title">Academy of Economic Studies — Faculty of Cybernetics, Statistics and Economic Informatics</div>
-                    <div class="item-sub">2023 – 2026</div>
-                    <div class="item-sub">Bachelor’s degree in progress.</div>
-                </div>
-                <hr>
-                <div class="item">
-                    <div class="item-title">National College “Mihai Eminescu” — Buzau, Romania</div>
-                    <div class="item-sub">Baccalaureat Exam: Computer Science: 10</div>
-                </div>
+          <div class="item">
+            <div class="item-title">
+              Cypress E‑Commerce Full Flow — <a href="#">Github</a>
             </div>
-
-            <div class="section">
-                <h2>Languages</h2>
-                <div class="item">English <span class="dots"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></span></div>
-                <div class="item">Romanian <span class="dots"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span></span></div>
-                <div class="item">French <span class="dots"><span class="full"></span><span></span><span></span><span></span><span></span></span></div>
+            <div class="portfolio-detail">
+              • <strong>End‑to‑end testing suite</strong> simulating a full user
+              journey on an e‑commerce platform: registration, login, product
+              search, add to cart, checkout, and logout. <br />Implemented using
+              <strong>Cypress</strong> with <strong>page object model</strong>,
+              assertions, and reusable test cases. <br />Covered both
+              <strong>positive and negative scenarios</strong> to ensure
+              <strong>robust UI/UX flows</strong>.
             </div>
+            <div class="item-sub">Tech: JavaScript, Cypress · July 2025</div>
+          </div>
 
-            <div class="section">
-                <h2>Certifications</h2>
-                <ul>
-                    <li>Oracle Academy (2024): Database Design</li>
-                    <li>Oracle Academy (2024): SQL Programming</li>
-                    <li>Oracle Academy (2024): PL/SQL Programming</li>
-                </ul>
+          <div class="item">
+            <div class="item-title">
+              Video Rental App —
+              <a href="https://github.com/mihaelacoman1/video-rental-app"
+                >Github</a
+              >
             </div>
-
-            <div class="section skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li><strong>Advanced:</strong> C/C++, Data Structures, Algorithms, OracleSQL</li>
-                    <li><strong>Intermediate:</strong> Python, Git, React, HTML/CSS, C#, JavaScript</li>
-                    <li><strong>Beginner:</strong> Java</li>
-                    <li><strong>Others:** Mathematics, ML, AI</li>
-                </ul>
+            <div class="portfolio-detail">
+              • <strong>Full-stack web platform</strong> developed in
+              <strong>C#</strong> for managing film rentals, including
+              <strong>user authentication</strong> and transactions.
+              <br />Allows users to <strong>search</strong>, view details, and
+              <strong>rent movies</strong>, while managing
+              <strong>available stock</strong> and transaction history.
+              <br />The project focuses on maintaining
+              <strong>data consistency</strong> and providing a smooth user
+              experience.
             </div>
+            <div class="item-sub">Tech: C#, .NET, SQL · May 2025</div>
+          </div>
 
+          <div class="item">
+            <div class="item-title">
+              Logo Matching Clustering —
+              <a
+                href="https://github.com/mihaelacoman1/logo-matching-clustering"
+                >Github</a
+              >
+            </div>
+            <div class="portfolio-detail">
+              • Developed a <strong>Python tool</strong> for clustering visually
+              similar logos using <strong>image processing</strong> and
+              <strong>machine learning</strong>. <br />Preprocessed images
+              (grayscale, thresholding, etc.) and extracted
+              <strong>ORB features</strong>. <br />Used
+              <strong>brute-force matching</strong> (Hamming distance) and
+              <strong>KMeans clustering</strong> to group similar logos.
+              <br />Implemented both manual and automatic comparison modes.
+              <br />Designed a <strong>GUI</strong> to visualize clusters and
+              match results in a user-friendly way.
+            </div>
+            <div class="item-sub">
+              Tech: Python, OpenCV, scikit‑learn · May 2025
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">
+              Hotel Reservation System — <a href="#">Github</a>
+            </div>
+            <div class="portfolio-detail">
+              • <strong>Relational database</strong> with six tables managing
+              hotel operations. <br />The system includes
+              <strong>customer management</strong>,
+              <strong>reservation tracking</strong>, and automatic
+              <strong>availability updates</strong> based on
+              <strong>SQL queries</strong>.
+            </div>
+            <div class="item-sub">Tech: SQL · Dec 2024</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">
+              DistributedDocDB —
+              <a href="https://github.com/mihaelacoman1/DistributedDocDB"
+                >Github</a
+              >
+            </div>
+            <div class="portfolio-detail">
+              • Designed and implemented a
+              <strong>TCP-based client-server document database</strong> in
+              <strong>Java</strong>. <br />Supported custom commands (<strong
+                >PUT, GET, DELETE</strong
+              >) for file upload, download, and removal between client and
+              server. <br />Handled <strong>concurrency</strong> on the server
+              side using <strong>multithreading</strong> for simultaneous client
+              connections. <br />Built custom
+              <strong>data structures</strong> (e.g., HashMap, LinkedList,
+              PriorityQueue) for internal document management. <br />Stored
+              documents locally on the server and ensured
+              <strong>response consistency</strong> across multiple requests.
+            </div>
+            <div class="item-sub">Tech: Java · Aug 2024</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">
+              Factorial Fusion (Assembly) — <a href="#">Github</a>
+            </div>
+            <div class="portfolio-detail">
+              • Calculates sum between a <strong>factorial</strong> and vector
+              minimum. <br />Used <strong>recursion</strong> for factorial
+              calculation and <strong>optimized memory access</strong> in
+              <strong>Assembly</strong> to compute results efficiently for any
+              vector size.
+            </div>
+            <div class="item-sub">Tech: Assembly · Dec 2023</div>
+          </div>
         </div>
+
+        <div class="section">
+          <h2>Extracurricular</h2>
+          <div class="item">
+            <div class="item-title">HackITall — Trading Bot</div>
+            <div class="portfolio-detail">
+              • Implemented a stock trading bot that monitored
+              <strong>real-time market data</strong> to detect low-price
+              opportunities for buying and high-price conditions for selling.
+              Designed logic for <strong>position limits</strong> to reduce risk
+              and <strong>maximize profit</strong> during stock fluctuations.
+              <br />Developed a strategy to balance
+              <strong>execution efficiency</strong> with
+              <strong>risk management</strong> in volatile market conditions.
+            </div>
+            <div class="item-sub">Tech: Python · Dec 2024</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">
+              Security Summer School, POLITEHNICA Bucharest
+            </div>
+            <div class="portfolio-detail">
+              • Participated in the Binary Security module: learned
+              <strong>static and dynamic binary analysis</strong>,
+              <strong>vulnerability discovery</strong>, exploitation
+              <br />techniques, and <strong>reverse engineering</strong> using
+              <strong>GDB</strong> and disassemblers. Worked on real-world
+              <strong>CTF-style challenges</strong> based on <br /><strong
+                >buffer overflows</strong
+              >, canaries, memory layout inspection, and
+              <strong>shellcode injection</strong>.
+              <a
+                href="https://open-education-hub.github.io/binary-security/"
+                target="_blank"
+                >More info</a
+              >
+            </div>
+            <div class="item-sub">Tech: Java · June-Aug 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="pfp-container">
+          <img
+            src="/public/pfp.jpg"
+            alt="Mihaela Adelina Coman"
+            class="profile-pic"
+          />
+        </div>
+
+        <div class="section">
+          <h2>Education</h2>
+          <div class="item">
+            <div class="item-title">
+              Academy of Economic Studies — Faculty of Cybernetics, Statistics
+              and Economic Informatics
+            </div>
+            <div class="item-sub">2023 – 2026</div>
+            <div class="item-sub">Bachelor’s degree in progress.</div>
+          </div>
+          <hr />
+          <div class="item">
+            <div class="item-title">
+              National College “Mihai Eminescu” — Buzau, Romania
+            </div>
+            <div class="item-sub">Baccalaureat Exam: Computer Science: 10</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Languages</h2>
+          <div class="item">
+            English
+            <span class="dots"
+              ><span class="full"></span><span class="full"></span
+              ><span class="full"></span><span class="full"></span><span></span
+            ></span>
+          </div>
+          <div class="item">
+            Romanian
+            <span class="dots"
+              ><span class="full"></span><span class="full"></span
+              ><span class="full"></span><span class="full"></span
+              ><span class="full"></span
+            ></span>
+          </div>
+          <div class="item">
+            French
+            <span class="dots"
+              ><span class="full"></span><span></span><span></span><span></span
+              ><span></span
+            ></span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Certifications</h2>
+          <ul>
+            <li>Oracle Academy (2024): Database Design</li>
+            <li>Oracle Academy (2024): SQL Programming</li>
+            <li>Oracle Academy (2024): PL/SQL Programming</li>
+          </ul>
+        </div>
+
+        <div class="section skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>
+              <strong>Advanced:</strong> C/C++, Data Structures, Algorithms,
+              OracleSQL
+            </li>
+            <li>
+              <strong>Intermediate:</strong> Python, Git, React, HTML/CSS, C#,
+              JavaScript
+            </li>
+            <li><strong>Beginner:</strong> Java</li>
+            <li><strong>Others:</strong> Mathematics, ML, AI</li>
+          </ul>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-
-
