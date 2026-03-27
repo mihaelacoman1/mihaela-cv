@@ -16,18 +16,27 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: flex-start; /* Adaugă această linie */
+  align-items: flex-start; /* Forțează ambele coloane să înceapă de sus de tot */
 }
-      .left {
-        flex: 2;
-        padding: 40px 24px;
-        border-right: 1px solid #ccc;
-      }
-      .right {
+
+.right {
   flex: 1;
-  padding: 20px 24px; /* Am redus de la 40px la 20px */
+  padding: 20px 24px; /* Reducem padding-ul de sus pentru a urca poza */
   background: #f9f9f9;
   text-align: center;
+}
+
+/* Stil nou pentru a pune contactele pe un singur rând sau mai compact */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 13px;
 }
       .profile-pic {
         width: 140px;
