@@ -13,21 +13,22 @@
         color: #111;
       }
       .container {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; /* Adaugă această linie */
+}
       .left {
         flex: 2;
         padding: 40px 24px;
         border-right: 1px solid #ccc;
       }
       .right {
-        flex: 1;
-        padding: 40px 24px;
-        background: #f9f9f9;
-        text-align: center;
-      }
+  flex: 1;
+  padding: 20px 24px; /* Am redus de la 40px la 20px */
+  background: #f9f9f9;
+  text-align: center;
+}
       .profile-pic {
         width: 140px;
         height: 140px;
