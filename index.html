@@ -13,31 +13,24 @@
         color: #111;
       }
       .container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start; /* Forțează ambele coloane să înceapă de sus de tot */
-}
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+      }
 
-.right {
-  flex: 1;
-  padding: 20px 24px; /* Reducem padding-ul de sus pentru a urca poza */
-  background: #f9f9f9;
-  text-align: center;
-}
+      .left {
+        flex: 2;
+        padding: 20px 24px;
+      }
 
-/* Stil nou pentru a pune contactele pe un singur rând sau mai compact */
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
-}
+      .right {
+        flex: 1;
+        padding: 20px 24px;
+        background: #f9f9f9;
+        text-align: center;
+      }
 
-.contact-info p {
-  margin: 0;
-  font-size: 13px;
-}
       .profile-pic {
         width: 140px;
         height: 140px;
@@ -92,9 +85,9 @@
         color: #111;
         margin-top: 5px;
         line-height: 1.5;
-        padding-left: 15px; 
-        text-indent: -15px; 
-        text-align: justify; 
+        padding-left: 15px;
+        text-indent: -15px;
+        text-align: justify;
       }
       .section .item-sub {
         font-size: 13px;
@@ -147,28 +140,25 @@
   </head>
   <body>
     <div class="container">
+      <!-- ==================== LEFT COLUMN ==================== -->
       <div class="left">
         <h1>Mihaela‑Adelina Coman</h1>
 
         <p>
           Email:
-          <a href="mailto:mihaela.coman@example.com"
+          <a href="mailto:mihaelaadelinacoman@gmail.com"
             >mihaelaadelinacoman@gmail.com</a
           >
         </p>
         <p>Phone: +40 758 742 612</p>
         <p>
-          
-          <a href="https://www.linkedin.com/in/mihaelacoman1"
-            >LinkedIn</a
-          >
+          <a href="https://www.linkedin.com/in/mihaelacoman1">LinkedIn</a>
         </p>
         <p>
-          <a href="https://github.com/mihaelacoman1"
-            > GitHub</a
-          >
+          <a href="https://github.com/mihaelacoman1">GitHub</a>
         </p>
 
+        <!-- EXPERIENCE -->
         <div class="section">
           <h2>Experience</h2>
           <div class="item">
@@ -189,42 +179,43 @@
               cycles.
             </div>
           </div>
+
+          <div class="item">
+            <div class="item-title">
+              <strong>Key Partner, Starbucks</strong>
+              <span style="float: right"><strong>Aug 2025 – Present</strong></span>
+            </div>
+            <div class="experience-detail">
+              Advanced user of <strong>Oracle MICROS Simphony</strong>, managing real-time
+              point-of-sale operations, troubleshooting system errors, and ensuring data
+              integrity between front-end transactions and back-end reporting.
+              Perform <strong>daily financial audits</strong> and inventory reconciliations,
+              identifying discrepancies through systematic analysis of sales logs.
+              Responsible for <strong>administrative compliance</strong>: drafting official
+              documents, managing legal certifications for the store, and archiving operational records.
+              Optimize <strong>supply chain workflows</strong> by generating automated replenishment orders
+              and analyzing waste patterns to reduce operational costs. Deliver premium <strong>customer
+              service</strong> while mentoring new partners on internal software systems and brand standards.
+            </div>
+          </div>
         </div>
 
-  <div class="item">
-  <div class="item-title">
-    <strong>Key Partner, Starbucks</strong>
-    <span style="float: right"><strong>Aug 2025 – Present</strong></span>
-  </div>
-  <div class="experience-detail">
-    Advanced user of <strong>Oracle MICROS Simphony</strong>, managing real-time 
-    point-of-sale operations, troubleshooting system errors, and ensuring data 
-    integrity between front-end transactions and back-end reporting. 
-    Perform <strong>daily financial audits</strong> and inventory reconciliations, 
-    identifying discrepancies through systematic analysis of sales logs. 
-    Responsible for <strong>administrative compliance</strong>: drafting official 
-    documents, managing legal certifications for the store, and archiving operational records. 
-    Optimize <strong>supply chain workflows</strong> by generating automated replenishment orders
-    and analyzing waste patterns to reduce operational costs. Deliver premium <strong>customer 
-    service</strong> while mentoring new partners on internal software systems and brand standards.
-  </div>
-</div>
-
+        <!-- PORTFOLIO -->
         <div class="section">
           <h2>Portfolio</h2>
 
           <div class="item">
-  <div class="item-title">
-    Energy Select | 
-    <a href="https://github.com/mihaelacoman1/energy-select">Github</a>
-  </div>
-  <div class="portfolio-detail">
-    • **Professional web platform** developed for a certified electrician, 
-    live at **energyselect.ro**. <br />. Managed the full **deployment lifecycle**,
-    including domain configuration, SSL integration, and a responsive multi-page architecture.
-  </div>
-  <div class="item-sub">Tech: HTML5, CSS3, JavaScript · March 2026</div>
-</div>
+            <div class="item-title">
+              Energy Select |
+              <a href="https://github.com/mihaelacoman1/energy-select">Github</a>
+            </div>
+            <div class="portfolio-detail">
+              • <strong>Professional web platform</strong> developed for a certified electrician,
+              live at <strong>energyselect.ro</strong>.<br />Managed the full <strong>deployment lifecycle</strong>,
+              including domain configuration, SSL integration, and a responsive multi-page architecture.
+            </div>
+            <div class="item-sub">Tech: HTML5, CSS3, JavaScript · March 2026</div>
+          </div>
 
           <div class="item">
             <div class="item-title">
@@ -245,9 +236,7 @@
           <div class="item">
             <div class="item-title">
               Video Rental App  |
-              <a href="https://github.com/mihaelacoman1/video-rental-app"
-                >Github</a
-              >
+              <a href="https://github.com/mihaelacoman1/video-rental-app">Github</a>
             </div>
             <div class="portfolio-detail">
               • <strong>Full-stack web platform</strong> developed in
@@ -266,9 +255,7 @@
           <div class="item">
             <div class="item-title">
               Logo Matching Clustering  |
-              <a
-                href="https://github.com/mihaelacoman1/logo-matching-clustering"
-                >Github</a>
+              <a href="https://github.com/mihaelacoman1/logo-matching-clustering">Github</a>
             </div>
             <div class="portfolio-detail">
               • Developed a <strong>Python tool</strong> for clustering visually
@@ -304,17 +291,14 @@
 
           <div class="item">
             <div class="item-title">
-              DistributedDocDB  | 
-              <a href="https://github.com/mihaelacoman1/DistributedDocDB"
-                >Github</a
-              >
+              DistributedDocDB  |
+              <a href="https://github.com/mihaelacoman1/DistributedDocDB">Github</a>
             </div>
             <div class="portfolio-detail">
               • Designed and implemented a
               <strong>TCP-based client-server document database</strong> in
-              <strong>Java</strong>. <br />Supported custom commands (<strong
-                >PUT, GET, DELETE</strong
-              >) for file upload, download, and removal between client and
+              <strong>Java</strong>. <br />Supported custom commands (<strong>PUT, GET, DELETE</strong>)
+              for file upload, download, and removal between client and
               server. <br />Handled <strong>concurrency</strong> on the server
               side using <strong>multithreading</strong> for simultaneous client
               connections. <br />Built custom
@@ -325,44 +309,43 @@
             </div>
             <div class="item-sub">Tech: Java · Aug 2024</div>
           </div>
+        </div>
 
-          
+        <!-- EXTRACURRICULAR ACTIVITIES -->
+        <div class="section">
+          <h2>Extracurricular Activities</h2>
 
-            
-      <div class="section">
-  <h2>EXTRACURRICULAR ACTIVITIES</h2>
+          <div class="item">
+            <div class="item-title">HackITall Trading Bot</div>
+            <div class="portfolio-detail">
+              • Implemented a stock trading bot that monitored real-time market data to detect
+              low-price opportunities for buying and high-price conditions for selling.<br />
+              • Designed logic for position limits to reduce risk and maximize profit during stock
+              fluctuations.<br />
+              • Developed a strategy to balance execution efficiency with risk management in
+              volatile market conditions.
+            </div>
+            <div class="item-sub">Tech: Python · Dec 2024</div>
+          </div>
 
-  <div class="item">
-    <div class="item-title">HackITall Trading Bot</div>
-    <div class="portfolio-detail">
-      • Implemented a stock trading bot that monitored real-time market data to detect
-      low-price opportunities for buying and high-price conditions for selling.<br>
-      • Designed logic for position limits to reduce risk and maximize profit during stock
-      fluctuations.<br>
-      • Developed a strategy to balance execution efficiency with risk management in
-      volatile market conditions.
-    </div>
-    <div class="item-sub">Tech: Python · Dec 2024</div>
-  </div>
+          <div class="item">
+            <div class="item-title">Security Summer School, POLITEHNICA Bucharest</div>
+            <div class="portfolio-detail">
+              • Participated in the Binary Security module: learned static and dynamic binary
+              analysis, vulnerability discovery, exploitation techniques, and reverse engineering
+              using GDB and disassemblers.<br />
+              • Worked on real-world CTF-style challenges based on buffer overflows, canaries,
+              memory layout inspection, and shellcode injection.<br />
+              • More info
+            </div>
+            <div class="item-sub">Tech: Java · June–Aug 2025</div>
+          </div>
+        </div>
 
-  <div class="item">
-    <div class="item-title">Security Summer School, POLITEHNICA Bucharest</div>
-    <div class="portfolio-detail">
-      • Participated in the Binary Security module: learned static and dynamic binary
-      analysis, vulnerability discovery, exploitation techniques, and reverse engineering
-      using GDB and disassemblers.<br>
-      • Worked on real-world CTF-style challenges based on buffer overflows, canaries,
-      memory layout inspection, and shellcode injection.<br>
-      • More info
-    </div>
-    <div class="item-sub">Tech: Java · June–Aug 2025</div>
-  </div>
-
-</div>
       </div>
+      <!-- ==================== END LEFT COLUMN ==================== -->
 
-
-      
+      <!-- ==================== RIGHT COLUMN ==================== -->
       <div class="right">
         <div class="pfp-container">
           <img
@@ -380,15 +363,15 @@
               and Economic Informatics
             </div>
             <div class="item-sub">2023 – 2026</div>
-            <div class="item-sub">Bachelor’s degree in progress.</div>
+            <div class="item-sub">Bachelor's degree in progress.</div>
           </div>
           <hr />
           <div class="item">
             <div class="item-title">
-              National College “Mihai Eminescu” — Buzau, Romania
+              National College "Mihai Eminescu" — Buzau, Romania
             </div>
             <div class="item-sub">Baccalaureat Exam: Computer Science: 10</div>
-            <div class="item-sub">                   Mathematics: 10</div> 
+            <div class="item-sub">                   Mathematics: 10</div>
           </div>
         </div>
 
@@ -438,21 +421,12 @@
               <strong>Intermediate:</strong> Java, Git, React, HTML/CSS, C#,
               JavaScript
             </li>
-            <li><strong>Beginner:</strong> Python </li>
+            <li><strong>Beginner:</strong> Python</li>
             <li><strong>Others:</strong> Mathematics, ML, AI</li>
           </ul>
         </div>
-
-      
-        
       </div>
+      <!-- ==================== END RIGHT COLUMN ==================== -->
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
